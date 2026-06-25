@@ -1,207 +1,468 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ElitePips — Free Forex Signals</title>
-<meta name="description" content="Answer a quick question to access our free Forex trading resources and signals. Educational content only."/>
-<meta name="theme-color" content="#001022">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Meta Pixel (kept) -->
+<title>Deepak Wadhwa Official</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background:#050505;
+    font-family:'Poppins',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Background Glow */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    left:-180px;
+    top:-100px;
+    background:radial-gradient(circle,#c58c1a,transparent 70%);
+    filter:blur(80px);
+    opacity:.35;
+    animation:moveGlow1 8s ease-in-out infinite;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    right:-180px;
+    bottom:-100px;
+    background:radial-gradient(circle,#ffcb30,transparent 70%);
+    filter:blur(80px);
+    opacity:.25;
+    animation:moveGlow2 10s ease-in-out infinite;
+}
+
+@keyframes moveGlow1{
+    50%{
+        transform:translate(50px,-30px) scale(1.1);
+    }
+}
+
+@keyframes moveGlow2{
+    50%{
+        transform:translate(-50px,30px) scale(1.1);
+    }
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+    text-align:center;
+    padding:30px 20px;
+    position:relative;
+    z-index:10;
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Profile */
+
+.profile{
+    width:95px;
+    height:95px;
+    margin:auto;
+    border-radius:50%;
+    padding:3px;
+
+    background:linear-gradient(
+        135deg,
+        #fff4c7,
+        #d4a437
+    );
+
+    animation:
+        floatLogo 4s ease-in-out infinite,
+        glowLogo 3s ease-in-out infinite;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #000;
+}
+
+@keyframes floatLogo{
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+@keyframes glowLogo{
+    0%,100%{
+        box-shadow:
+        0 0 15px rgba(255,203,48,.4),
+        0 0 35px rgba(255,203,48,.2);
+    }
+
+    50%{
+        box-shadow:
+        0 0 25px rgba(255,203,48,.9),
+        0 0 60px rgba(255,203,48,.5);
+    }
+}
+
+/* Title */
+
+h1{
+    margin-top:20px;
+    font-family:'Cinzel',serif;
+    font-size:52px;
+    text-transform:uppercase;
+
+    background:linear-gradient(
+        to bottom,
+        #fff7da,
+        #f4dd8c,
+        #c58c1a
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    position:relative;
+    display:inline-block;
+}
+
+h1::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-150%;
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transform:skewX(-20deg);
+
+    animation:shine 4s linear infinite;
+}
+
+@keyframes shine{
+    100%{
+        left:250%;
+    }
+}
+
+.subtitle{
+    color:#cfcfcf;
+    margin-top:10px;
+    font-size:13px;
+    letter-spacing:4px;
+    font-weight:600;
+}
+
+/* Card */
+
+.card{
+    width:100%;
+    max-width:500px;
+    margin:35px auto;
+
+    padding:28px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.5),
+    0 0 20px rgba(255,203,48,.08);
+
+    animation:cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes cardFloat{
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+.card p{
+    color:white;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.card strong{
+    font-weight:700;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:18px;
+}
+
+.stat h3{
+    color:#ffcb30;
+    font-size:24px;
+
+    animation:statGlow 2s ease-in-out infinite;
+}
+
+@keyframes statGlow{
+    50%{
+        text-shadow:
+        0 0 10px #ffcb30,
+        0 0 20px #ffcb30;
+    }
+}
+
+.stat span{
+    color:#9e9e9e;
+    font-size:11px;
+    letter-spacing:1px;
+}
+
+/* Button */
+
+.cta{
+    width:400px;
+    max-width:90%;
+    height:75px;
+
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:20px;
+    font-weight:700;
+    color:#111;
+
+    border-radius:50px;
+
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(
+        120deg,
+        #fff4c7,
+        #d4a437,
+        #fff4c7
+    );
+
+    box-shadow:
+    0 0 25px rgba(255,203,48,.4),
+    0 0 60px rgba(255,203,48,.2);
+
+    animation:buttonPulse 3s ease-in-out infinite;
+
+    transition:.3s;
+}
+
+.cta:hover{
+    transform:translateY(-3px) scale(1.02);
+}
+
+.cta::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-150%;
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.9),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation:buttonShine 3s linear infinite;
+}
+
+@keyframes buttonShine{
+    100%{
+        left:250%;
+    }
+}
+
+@keyframes buttonPulse{
+
+    50%{
+        box-shadow:
+        0 0 40px rgba(255,203,48,.8),
+        0 0 90px rgba(255,203,48,.3);
+    }
+}
+
+/* Footer */
+
+.footer{
+    margin-top:20px;
+    font-size:12px;
+    letter-spacing:2px;
+    color:#7f7f7f;
+}
+
+.agency{
+    margin-top:10px;
+    color:white;
+}
+
+.agency span{
+    color:#ffcb30;
+    font-weight:700;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:34px;
+    }
+
+    .card{
+        max-width:100%;
+        padding:20px;
+    }
+
+    .stats{
+        gap:10px;
+    }
+
+    .stat h3{
+        font-size:18px;
+    }
+
+    .cta{
+        height:65px;
+        font-size:16px;
+    }
+}
+
+</style>
+
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1593721464926438');
+fbq('init', '2026205018026269');
 fbq('track', 'PageView');
 </script>
-
-<style>
-:root{
-  --accent1:#ff7a00;
-  --accent2:#ff4d00;
-  --text:#e6eefb;
-  --muted:#bfcfe6;
-  --card-bg:rgba(6,8,15,0.92);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  background:linear-gradient(160deg,#001022,#002a4a);
-  display:flex;align-items:center;justify-content:center;
-  padding:18px;color:var(--text);
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-}
-.container{
-  width:100%;max-width:640px;
-  background:var(--card-bg);
-  border-radius:14px;padding:20px;
-  box-shadow:0 24px 60px rgba(0,10,30,0.6);
-  position:relative;overflow:hidden;color:var(--text);
-}
-.progressWrap{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.progress{flex:1;height:9px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
-.progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2));width:0;transition:width .45s ease}
-.progressNum{min-width:44px;text-align:right;color:var();font-weight:700;font-size:13px}
-.question{animation:fadeIn .32s ease;text-align:center;margin-bottom:14px}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.hype{
-  display:inline-block;padding:10px 14px;border-radius:12px;font-weight:900;font-size:20px;
-  background:linear-gradient(90deg,#ffd9b3,#ffb48a);color:#1b0520;
-  box-shadow:0 8px 30px rgba(255,120,0,0.12);
-}
-.hype.small{font-size:16px;padding:8px 12px}
-.pulse{animation:pulse 1.6s infinite}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
-.options{display:flex;flex-direction:column;gap:10px;margin-top:12px}
-.option{
-  background:rgba(255,255,255,0.02);
-  border-radius:12px;padding:12px 14px;cursor:pointer;font-weight:800;text-align:center;
-  border:1px solid rgba(255,255,255,0.04);
-  box-shadow:0 8px 30px rgba(0,0,0,0.5);
-  transition:transform .16s,box-shadow .16s,background .16s;
-}
-.option:hover{transform:translateY(-6px);box-shadow:0 18px 46px rgba(255,90,0,0.12);background:linear-gradient(90deg,rgba(255,90,0,0.08),rgba(255,150,0,0.06));}
-.option.selected{background:linear-gradient(90deg,rgba(255,120,0,0.18),rgba(255,60,0,0.12));color:#fff;transform:translateY(-8px)}
-.thankyou{text-align:center;padding:6px}
-.thank-h{font-size:20px;margin:6px 0;font-weight:900}
-.thank-sub{color:var();margin-bottom:12px}
-.join-btn{
-  display:inline-block;position:relative;overflow:hidden;
-  background:linear-gradient(90deg,#ff7a00,#ff4d00);
-  color:#fff;padding:12px 18px;border-radius:12px;font-weight:900;text-decoration:none;
-  box-shadow:0 14px 40px rgba(255,90,0,0.18);
-}
-.join-btn::after{content:'';position:absolute;left:-50%;top:0;width:40%;height:100%;background:linear-gradient(120deg,rgba(255,255,255,0)0%,rgba(255,255,255,0.14)50%,rgba(255,255,255,0)100%);transform:skewX(-20deg);filter:blur(6px);animation:shine 3.4s linear infinite}
-@keyframes shine{0%{left:-60%}100%{left:120%}}
-.fomo{background:linear-gradient(90deg,#ffe6d6,#ffd0b3);color:#2b0a00;padding:8px 12px;border-radius:10px;font-weight:800;display:inline-block;margin:10px 0;font-size:13px}
-.small{font-size:13px;color:var();margin-top:8px}
-.row{display:flex;gap:10px;justify-content:center;margin-top:12px}
-.btn-ghost{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);font-weight:700;text-decoration:none;cursor:pointer}
-.note{font-size:12px;color:var(--muted);margin-top:10px}
-@media (max-width:520px){.container{padding:14px}.hype{font-size:18px}}
-</style>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2026205018026269&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    
 </head>
-
 <body>
-<main class="container" id="card">
-  <div class="progressWrap">
-    <div class="progress"><i id="bar"></i></div>
-    <div class="progressNum" id="progNum">0%</div>
-  </div>
 
-  <div id="q-box">
-    <!-- Single question will be rendered here -->
-  </div>
-</main>
+<div class="container">
 
-<script>
-/* ---------- CONFIG ---------- */
-const telegramLink = "https://telegram.me/+ZVpxPGfP6LFiZDFl"; // updated link
-/* ---------- STATE ---------- */
-let answered = false;
-const qBox = document.getElementById('q-box'), bar = document.getElementById('bar'), progNum = document.getElementById('progNum');
-
-/* ---------- RENDER ---------- */
-function renderSingleQuestion(){
-  qBox.innerHTML = `
-    <div class="question">
-      <div class="hype pulse">🔥 Live Forex set-ups — join our learning community</div>
-      <div style="height:8px"></div>
-      <div class="options">
-        <div class="option" data-val="yes">Yes — I want access to signals & learning</div>
-        <div class="option" data-val="no">Not right now — show me resources</div>
-      </div>
-      <div class="small">Takes one tap. We share educational trade ideas only — not financial advice.</div>
+    <div class="profile">
+        <img src="Deepak.jpg" alt="Profile">
     </div>
-  `;
-  updateProgress(0);
-  document.querySelectorAll('.option').forEach(o=>o.addEventListener('click', onChooseSingle));
-}
 
-function updateProgress(pct){
-  bar.style.width = pct + "%";
-  progNum.textContent = pct + "%";
-}
+    <h1>Deepak Wadhwa Official™</h1>
 
-/* ---------- PIXEL TRACKING WRAPPER ---------- */
-function sendSubscribe(eventName, payload){
-  try{ fbq('track', eventName, payload || {}); }catch(e){}
-}
-
-/* ---------- BASIC CLIENT BOT CHECK ---------- */
-function onChooseSingle(ev){
-  if(answered) return;
-  answered = true;
-  const el = ev.currentTarget;
-  const val = el.getAttribute('data-val');
-  document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));
-  el.classList.add('selected');
-  setTimeout(()=>{ updateProgress(66); showConfirmFor(val); },220);
-}
-
-function showConfirmFor(val){
-  if(val === 'yes'){
-    qBox.innerHTML = `
-      <div class="thankyou">
-        <div class="hype small">You're almost there — quick confirm</div>
-        <div class="thank-sub">We keep the group focused on learning and real setups. Educational content only.</div>
-        <div><span class="fomo">⚡ Limited interactive spots — priority given to active learners</span></div>
-        <div class="row" style="margin-top:14px">
-          <button id="proceedBtn" class="join-btn">Proceed to Telegram →</button>
-        </div>
-        <div class="note">By proceeding you confirm you want educational trade setups. Not financial advice.</div>
-      </div>
-    `;
-    updateProgress(85);
-    sendSubscribe('Subscribe', {interested: 'yes', step: 'confirm_shown'});
-    setTimeout(()=>{ const pb = document.getElementById('proceedBtn'); if(pb) pb.addEventListener('click', onProceedClickYes); },80);
-  } else {
-    qBox.innerHTML = `
-      <div class="thankyou">
-        <div class="hype small">No problem — check our free resources</div>
-        <div class="thank-sub">We share guides, sample setups and educational posts in the resource page.</div>
-        <div class="row">
-          <button id="backBtn" class="btn-ghost">Back</button>
-          <a id="learnBtn" class="join-btn" href="\${telegramLink}" target="_blank" rel="noopener">See Resources →</a>
-        </div>
-        <div class="note">You can always come back and request signals later.</div>
-      </div>
-    `;
-    updateProgress(100);
-    sendSubscribe('Subscribe', {interested: 'no'});
-    setTimeout(()=>{ const bb=document.getElementById('backBtn'); if(bb) bb.addEventListener('click', ()=>{ answered=false; renderSingleQuestion(); }); },50);
-    setTimeout(()=>{ const lb=document.getElementById('learnBtn'); if(lb) lb.addEventListener('click', ()=>sendSubscribe('LearnClick',{interested:'no'})); },50);
-  }
-}
-
-function onProceedClickYes(){
-  sendSubscribe('ProceedClick', {interested:'yes'});
-  const redirectUrl = window.location.origin + '/redirect.html?to=telegram';
-  const win = window.open(redirectUrl, '_blank', 'noopener');
-  if(!win){ window.location.href = redirectUrl; }
-  qBox.innerHTML = `
-    <div class="thankyou">
-      <div class="hype small">Done — check your Telegram</div>
-      <div class="thank-sub">If Telegram didn't open, tap the button again.</div>
-      <div class="row" style="margin-top:12px">
-        <a class="join-btn" href="/redirect.html?to=telegram" target="_blank" rel="noopener">Open Telegram →</a>
-      </div>
-      <div class="note">Educational content only. No guarantees of profit.</div>
+    <div class="subtitle">
+        ELITE TRADING MASTERY
     </div>
-  `;
-  updateProgress(100);
-}
 
-/* ---------- INITIAL ---------- */
-renderSingleQuestion();
-</script>
+    <div class="card">
+
+        <p>
+            Master the charts and crush the markets.<br>
+            Join us for <strong>real-time predictive insights</strong><br>
+            and exclusive winning strategies.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h3>12.4k+</h3>
+                <span>TRADERS</span>
+            </div>
+
+            <div class="stat">
+                <h3>98.2%</h3>
+                <span>ACCURACY</span>
+            </div>
+
+            <div class="stat">
+                <h3>LIVE</h3>
+                <span>ANALYSIS</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a href="https://t.me/+Z--4C1GAw9wxY2E1" class="cta">
+        JOIN THE LEARNING CHANNEL
+    </a>
+
+    <div class="footer">
+        ✦ 18+ | PLAY RESPONSIBLY ✦
+
+        <div class="agency">
+            Ads managed by <span>Digital Ads Expert</span>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
